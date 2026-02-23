@@ -1,0 +1,57 @@
+:root{
+  --main-bg: #ffffff;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--main-bg);
+  color: #222;
+  line-height: 1.6;
+}
+
+header h1{ letter-spacing: -1px; 
+margin: 0 auto; width: fit-content; }
+
+.container pre{ font-size: 0.9rem; }
+
+.card h5{ font-weight: 600; }
+
+footer{ position: relative; }
+
+/* Theme colors */
+:root{
+  --primary: #1066ff;
+  --accent: #10b981; /* green */
+  --header-bg: linear-gradient(90deg,#777a8a 0%, #060aff 100%);
+}
+
+.header-custom{ background: var(--header-bg); }
+.header-custom h1{ color: #ffffff }
+
+/* Reveal animation */
+.reveal{
+  opacity: 0;
+  transform: translateY(12px) scale(0.995);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22,.9,.32,1);
+}
+.reveal.active{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card:hover{ transform: translateY(-6px); transition: transform .18s ease; }
+
+.scroll-top{ position: fixed; right: 18px; bottom: 18px; width:48px; height:48px; padding:0; display:flex; align-items:center; justify-content:center; font-size:1.25rem }
+
+/* Smooth anchor behavior */
+html{ scroll-behavior: smooth }
+
+/* Copy feedback */
+.copied-badge{ position:relative; display:inline-block }
+.copied-badge .copied-msg{ position:absolute; top:-28px; right:0; background:#222; color:#fff; padding:4px 8px; border-radius:4px; font-size:0.8rem }
+
+/* Collapse body simple animation */
+.collapse-body{ max-height:0; overflow:hidden; transition: max-height .36s ease, opacity .36s ease; opacity:0 }
+.collapse-body.open{ max-height:400px; opacity:1 }
